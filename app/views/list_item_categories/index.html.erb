@@ -1,0 +1,23 @@
+<h1>Listing list_item_categories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @list_item_categories.each do |list_item_category| %>
+  <tr>
+    <td><%= list_item_category.name %></td>
+    <td><%= link_to 'Show', list_item_category %></td>
+    <td><%= link_to 'Edit', edit_list_item_category_path(list_item_category) %></td>
+    <td><%= link_to 'Destroy', list_item_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New List item category', new_list_item_category_path %>

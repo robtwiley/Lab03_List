@@ -8,7 +8,29 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="outer-body">
+
+  <div id="menu-bar">
+     <div id="menu-item"><%= link_to 'Home', list_item_categories_path, { :title => 'Go to home page'} %></div>
+  </div>
+
+  <div id="shopping-list-box">
+  
+    <%= yield %>
+
+  </div> <!-- end shopping-list-box -->
+
+  <div id="outer-body-bottom-center">
+     <script type="text/javascript" language="javascript">
+     <!-- Begin
+	    writeBottom("No");
+     //-->
+     </script>
+  </div> <!-- end outer-body-bottom-center -->
+
+
+<div> <!--end outer-body -->
+
 
 </body>
 </html>
